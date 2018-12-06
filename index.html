@@ -24,7 +24,7 @@
             crossorigin="anonymous"></script>
     </head>
     <body ng-app="chatBotApp" ng-controller="ChatBotController">
-        <div id="chat">
+        <div id="chat" ng-init="initMessage()">
             <div class="header">
                 Bot thingy
             </div>
@@ -47,6 +47,9 @@
                         ng-click="parseMessage(currentMessage)">Send</button>
                 </form>
             </div>
+        </div>
+        <div id="tts">
+            <input type="checkbox" ng-model="tts"> Read out loud (TTS)
         </div>
         <script src="bot.js"></script>
     </body>
